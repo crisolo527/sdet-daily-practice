@@ -109,3 +109,14 @@ I'm also building a separate flagship repo: a full-stack Python test automation 
 - Remind me to update "Current position" above when a week/phase completes.
 - Follow the file & commit checkpoints above without me having to ask each time.
 
+## Glossary
+
+`glossary.md` at the repo root is a running term/definition table (markdown,
+easy to export as CSV) covering vocabulary introduced across all conceptual
+lessons — I study it on mobile via RemNote (imported as flashcards).
+
+- Whenever a day's conceptual lesson introduces a new term (in the Concept
+  section), append it to `glossary.md` as part of creating that day's files —
+  don't wait for me to ask.
+- Include it in the day's commit rather than a separate one.
+
