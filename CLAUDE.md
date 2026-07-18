@@ -10,11 +10,19 @@ I work with an internal AI test-case generation tool (Python/Streamlit based), Y
 
 ## Format
 
-- Daily: 1 technical/coding question \+ 1 process/conceptual QA question.  
-- Weekly theme: each week focuses on one topic (e.g. "API testing", "flaky tests") so the two daily questions reinforce each other instead of being disconnected trivia.  
-- Time budget: \~10 min for the coding question, \~15-20 min for the conceptual one (written as a short paragraph, not just thought about).  
-- Technical answers go in their real file extension (`.py`, `.js`, etc.) so the repo doubles as a runnable code sample, not just prose.  
-- Conceptual answers go in markdown; mermaid diagrams welcome if sketching architecture helps.
+- Daily: 1 technical/coding lesson \+ 1 process/conceptual QA lesson, each followed by a hands-on exercise.
+- Lesson-first, not cold-quiz: each day teaches the concept with a worked example *before* asking me to apply it. I'm building from limited footing, so I need the concept explained and demonstrated first, not just prompted blind.
+- Weekly theme: each week focuses on one topic (e.g. "API testing", "flaky tests") so the two daily lessons reinforce each other instead of being disconnected trivia.
+- Time budget: \~10 min for the coding exercise, \~15-20 min for the conceptual one (written as a short paragraph, not just thought about).
+- Technical files go in their real file extension (`.py`, `.js`, etc.) so the repo doubles as a runnable code sample, not just prose. Structure:
+  1. **Concept + pattern** — brief note on the technique being practiced.
+  2. **Worked example** — one fully-solved example, commented, showing the technique applied.
+  3. **Your exercise** — a related but different problem, TODO stubs only (not a repeat of the worked example — the point is to build the muscle, not copy the pattern).
+- Conceptual files go in markdown; mermaid diagrams welcome if sketching architecture helps. Structure:
+  1. **Concept** — short plain-language explanation.
+  2. **Worked example** — one fully-solved example applying the concept.
+  3. **Your turn** — a related question for me to answer in my own words.
+  4. **Answer** — where I write my response.
 
 ## Repo structure
 
