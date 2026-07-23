@@ -114,8 +114,59 @@ clamp() tests — think through is_balanced()'s own partitions first.
 
 
 def is_balanced(expression: str) -> bool:
-    # TODO: list your partitions/boundaries here, then implement
-    raise NotImplementedError
+    """
+    Partitions:
+        - expression with no brackets           -> should return True
+        - expression with balanced brackets     -> should return True
+        - expression with unbalanced brackets   -> should return False
+    Boundaries:
+        - expression == ""          -> should return True (edge case)
+        - expression == "()"        -> should return True (boundary itself is valid)
+        - expression == "("         -> should return False (just outside, unbalanced)
+        - expression == ")"         -> should return False (just outside, unbalanced)
+    """
+    stack = []
+    bracket_map = {
+        ')': '(', 
+        ']': '[', 
+        '}': '{'
+    }
+
+    for char in expression:
+        if char in bracket_map.values():  # opening brackets
+            stack.append(char)
+        elif char in bracket_map.keys():  # closing brackets
+            if not stack or stack[-1] != bracket_map[char]:
+                return False
+            stack.pop() 
+
+    return len(stack) == 0
 
 
-# TODO: write your test suite below
+def test_is_balanced_no_brackets():
+    # partition: expression with no brackets
+    assert is_balanced("abc") is True
+
+def test_is_balanced_balanced_brackets():
+    # partition: expression with balanced brackets
+    assert is_balanced("({[]})") is True
+
+def test_is_balanced_unbalanced_brackets():
+    # partition: expression with unbalanced brackets
+    assert is_balanced("([)]") is False
+
+def test_is_balanced_empty_string():
+    # boundary: expression == ""
+    assert is_balanced("") is True
+
+def test_is_balanced_single_pair():
+    # boundary: expression == "()"
+    assert is_balanced("()") is True
+
+def test_is_balanced_single_open():
+    # boundary: expression == "("
+    assert is_balanced("(") is False
+
+def test_is_balanced_single_close():
+    # boundary: expression == ")"
+    assert is_balanced(")") is False

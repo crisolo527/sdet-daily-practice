@@ -59,4 +59,10 @@ Write a short paragraph or two — not just bullet points.
 
 ## Answer
 
-_(write your answer here)_
+pt.1 
+
+For the is_balanced function its equivalence partitions are different from the first string example in the sense that the main partitions are the presence of matching brackets(True), incomplete or broken brackets(False), or no brackets at all(True). The bondary value analysis of these partitions are an empty string(True), a single pair of completed brackets(True), a single open bracket(False), and a single closing bracket(False).
+
+pt.2
+
+At work, I applied equivalence partitioning and boundary analysis to make sure that the test case generation tool we have was still backwards compatible after we updated a feature. For example, we moved off of a requirement where tickets had to be formatted a certain way before generating test cases. This improved the tool but I had to make sure the partitions were covered so that both the past feature and new feature were covered properly. The partitions were to be that the ticket was not formatted at all like the previous requiement had, the ticket had some formatting from the past, and the ticket had the full formatted version as before. Essentially, all partitions still had to work through the tool after our overall improvements removing that hard requirement.
