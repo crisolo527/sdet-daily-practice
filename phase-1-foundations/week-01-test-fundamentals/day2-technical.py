@@ -100,14 +100,24 @@ def remove_duplicates(items):
     return result
 
 
-# TODO: partitions/boundaries as a comment here
+# Partitions/boundaries written from the spec, before worrying about the bug:
+#   - empty list                                    -> should return empty list
+#   - single element in list                        -> should return the same element in the list
+#   - all different elements in list                -> should return the same elements in list in the same order
+#   - all duplicate elements in list                -> should return a single of the elements in the list
+#   - list contains duplicates and unique elements  -> should return a list without duplicates preserving the order
 
-# TODO: test_remove_duplicates_empty_list
+def test_remove_duplicates_empty_list():
+    assert remove_duplicates([]) == []
 
-# TODO: test_remove_duplicates_single_element
+def test_remove_duplicates_single_element():
+    assert remove_duplicates([1]) == [1]
 
-# TODO: test_remove_duplicates_all_unique
+def test_remove_duplicates_all_unique():
+    assert remove_duplicates([1, 2, 3]) == [1, 2, 3]
 
-# TODO: test_remove_duplicates_all_duplicate
+def test_remove_duplicates_all_duplicate():
+    assert remove_duplicates([1, 1, 1]) == [1]
 
-# TODO: test_remove_duplicates_mixed
+def test_remove_duplicates_mixed():
+    assert remove_duplicates([3, 2, 2, 5]) == [3, 2, 5]
